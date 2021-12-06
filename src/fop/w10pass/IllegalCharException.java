@@ -2,7 +2,7 @@ package fop.w10pass;
 
 @SuppressWarnings("serial")
 public class IllegalCharException extends Exception{
-    private char used;
+    private final char used;
     public IllegalCharException(char used)
     {
         this.used = used;
@@ -25,5 +25,10 @@ public class IllegalCharException extends Exception{
         default:
             return Character.toString(used);
         }
+    }
+    @Override
+    public String toString()
+    {
+        return "You have illegal char";
     }
 }
