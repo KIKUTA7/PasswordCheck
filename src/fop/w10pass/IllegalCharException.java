@@ -1,7 +1,13 @@
 package fop.w10pass;
 
 @SuppressWarnings("serial")
-public class IllegalCharException {
+public class IllegalCharException extends Exception{
+    private char used;
+    public IllegalCharException(char used)
+    {
+        this.used = used;
+    }
+
     private String escapeSpecial(char used) {
         switch (used) {
         case '\n':
