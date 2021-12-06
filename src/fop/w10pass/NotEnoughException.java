@@ -1,7 +1,7 @@
 package fop.w10pass;
 
 public class NotEnoughException extends Exception{
-    private int should;
+    private final int should;
     private final int is;
     public NotEnoughException (int should, int is)
     {

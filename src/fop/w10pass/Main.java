@@ -6,8 +6,20 @@ public class Main {
         char[] ill = new char[]{'a','b','!'};
         Password pass = new Password(1,4,2,3,10,ill);
      try{   pass.checkFormat(pwd);}
-     catch (Exception e){
-
+     catch (IllegalCharException e){
+          e.printStackTrace();
      }
+     catch (NotEnoughException e )
+     {
+         e.printStackTrace();
+     }
+     /*
+     catch(Exception e)
+     {
+     e.printStackTrace();
+     }
+
+     es shegedzlo dagewera im 2 is nacvlad imitoro Exception is shvilebi arian.
+      */
     }
 }
